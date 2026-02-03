@@ -188,11 +188,12 @@ Computes Δ̂_phi(x) using:
 
 phi options: :mean, :tail, :loss
 """
-function estimate_delta_phi_at_x(Y::Vector{Float64}, D::Vector{Int}, X::Vector{Int};
+function estimate_delta_phi_at_x(Y::Vector{Float64}, D::Vector{Int}, X::AbstractVector; 
                                  xval::Int=0, phi::Symbol=:mean, c::Float64=0.0,
                                  grid_n::Int=200)
-    idx0 = [i for i in eachindex(Y) if (X[i] == xval && D[i] == 0)]
-    idx1 = [i for i in eachindex(Y) if (X[i] == xval && D[i] == 1)]
+    Xint= Int.(X)
+    idx0 = [i for i in eachindex(Y) if (Xint[i] == xval && D[i] == 0)]
+    idx1 = [i for i in eachindex(Y) if (Xint[i] == xval && D[i] == 1)]
 
     y0 = Float64[Y[i] for i in idx0]
     y1 = Float64[Y[i] for i in idx1]
