@@ -115,8 +115,7 @@ Reproducibility
 - The driver and scripts set RNG seeds in example runs; to reproduce identical outputs, keep the default seeds and parameters.
 
 Citation
-If you use this code or reproduce results, cite the accompanying preprint:
-"Distributional Policy Evaluation via Optimal Transport" — preprint submitted to The Econometric Journal (see included PDF).
+If you use this code or reproduce results, cite the accompanying preprint.
 
 Contact / issues
 Open an issue in this repository with:
@@ -124,5 +123,4 @@ Open an issue in this repository with:
 - the exact command you ran,
 - the error message or backtrace (if any).
 
-License
-- See repository for any license file included. If no license is present, request permission before reusing substantial portions of the code or results.
+License: MIT Licence
